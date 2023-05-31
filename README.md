@@ -1,3 +1,5 @@
+The rest of this README describes KACTL, which this repo is based on:
+
 # KACTL
 
 This repo hosts KACTL, [KTH](https://en.wikipedia.org/wiki/KTH_Royal_Institute_of_Technology)'s ICPC team reference document.
