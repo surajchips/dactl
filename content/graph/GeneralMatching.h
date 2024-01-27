@@ -29,9 +29,7 @@ vector<pii> generalMatching(int N, vector<pii>& ed) {
 			rep(j,N,M) {
 				int r = rand() % mod;
 				mat[i][j] = r, mat[j][i] = (mod - r) % mod;
-			}
-		}
-	} while (matInv(A = mat) != M);
+			}}} while (matInv(A = mat) != M);
 
 	vi has(M, 1); vector<pii> ret;
 	rep(it,0,M/2) {
@@ -48,7 +46,6 @@ vector<pii> generalMatching(int N, vector<pii>& ed) {
 				rep(j,0,M) A[i][j] = (A[i][j] - A[fi][j] * b) % mod;
 			}
 			swap(fi,fj);
-		}
-	}
+		}}
 	return ret;
 }
