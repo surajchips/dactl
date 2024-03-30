@@ -30,8 +30,8 @@ vector<P> minkowski(vector<P> poly1, vector<P> poly2) {
     while (i < n || j < m) {
         ret.push_back(poly1[i] + poly2[j]);
         auto c = (poly1[i+1] - poly1[i]).cross(poly2[j+1]-poly2[j]);
-        i += c >= 0;
-        j += c <= 0;
+        i += c >= 0 && i < n;
+        j += c <= 0 && j < m;
     }
     return ret;
 }
